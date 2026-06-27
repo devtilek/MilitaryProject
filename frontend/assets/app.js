@@ -493,3 +493,40 @@ const renderRecent = (transactions) => {
       <div></div>
     </article>`).join('');
 };
+
+
+
+// ── TAB SWITCHING & MODAL ─────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  // Tab switching
+  document.querySelectorAll('.nav-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tab = btn.dataset.tab;
+      document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = document.getElementById('tab-' + tab);
+      if (panel) panel.classList.add('active');
+      const label = document.getElementById('tabLabel');
+      if (label) label.textContent = tab.charAt(0).toUpperCase() + tab.slice(1);
+    });
+  });
+
+  // View all → Transactions
+  document.querySelectorAll('[data-tab="transactions"]').forEach(el => {
+    el.addEventListener('click', () => {
+      const navBtn = document.querySelector('.nav-item[data-tab="transactions"]');
+      if (navBtn) navBtn.click();
+    });
+  });
+
+  // Modal open/close
+  const overlay = document.getElementById('modalOverlay');
+  const openBtn = document.getElementById('openModalBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+  if (openBtn) openBtn.addEventListener('click', () => overlay.classList.remove('hidden'));
+  if (closeBtn) closeBtn.addEventListener('click', () => overlay.classList.add('hidden'));
+  if (overlay) overlay.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
+  });
+});
