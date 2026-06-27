@@ -1,0 +1,21 @@
+{
+  "name": "expense-tracker-practice-project",
+  "version": "1.0.0",
+  "description": "Expense Tracker CRUD application with Express, MongoDB, JWT authentication and vanilla JavaScript frontend.",
+  "main": "backend/src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "setup": "npm --prefix backend install",
+    "setup-env": "powershell -ExecutionPolicy Bypass -Command \"if (!(Test-Path backend/.env)) { Copy-Item backend/.env.example backend/.env } else { Write-Output 'backend/.env already exists' }\"",
+    "dev": "npm --prefix backend run dev",
+    "start": "npm --prefix backend start"
+  },
+  "keywords": [
+    "expense-tracker",
+    "express",
+    "mongodb",
+    "crud"
+  ],
+  "author": "",
+  "license": "ISC"
+}
