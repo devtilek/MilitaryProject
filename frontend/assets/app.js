@@ -493,8 +493,3 @@ const renderRecent = (transactions) => {
       <div></div>
     </article>`).join('');
 };
-
-// Patch loadProfile to also fill profile tab
-const _origLoadProfile = loadProfile;
-// Patch loadTransactions to also render recent list
-const _origLoadTransactions = loadTransactions;
