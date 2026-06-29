@@ -97,4 +97,4 @@ Authorization: Bearer YOUR_JWT_TOKEN
    - `CLIENT_URL=https://your-render-app.onrender.com`
 8. Deploy and paste the public link into `REPORT.md`.
 
-Full report: [REPORT.md](REPORT.md)
+
