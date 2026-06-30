@@ -1,6 +1,6 @@
-# LedgerFlow Expense Tracker
+# Kassa Expense Tracker
 
-LedgerFlow is a responsive Expense Tracker CRUD application for the Industry Practice Project. It uses HTML, CSS and JavaScript on the frontend, Node.js and Express.js on the backend, and MongoDB with Mongoose for the database.
+Kassa is a responsive Expense Tracker CRUD application for the Industry Practice Project. It uses HTML, CSS and JavaScript on the frontend, Node.js and Express.js on the backend, and MongoDB with Mongoose for the database.
 
 ## Features
 
